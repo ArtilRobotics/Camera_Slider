@@ -10,13 +10,15 @@ int buttonPin = 2;
 
 int xPosition = 0;
 int yPosition = 0;
+int velx;
+int vely;
 
 void setup()
 {
    Serial.begin(9600);
    Serial.println("Stepper test!");
-   motor1.setSpeed(100);
-   motor2.setSpeed(100);
+   motor1.setSpeed(100); // 50 rpm
+   motor2.setSpeed(100); // 50 rpm
 
    pinMode(xPin, INPUT);
    pinMode(yPin, INPUT);
@@ -30,7 +32,7 @@ void loop()
    {
       motor1.step(1, FORWARD, DOUBLE);
       if (yPosition > 530)
-      {
+      {   
          motor2.step(1, FORWARD, DOUBLE);
       }
       if (yPosition < 520)
@@ -57,9 +59,12 @@ void loop()
       motor2.step(1, FORWARD, DOUBLE);
    }
 
-   if (yPosition < 520)
+      if (yPosition < 520)
    {
       motor2.step(1, BACKWARD, DOUBLE);
    }
-
+   Serial.print("X: ");
+   Serial.print(xPosition);
+   Serial.print(" | Y: ");
+   Serial.println(yPosition);
 }
