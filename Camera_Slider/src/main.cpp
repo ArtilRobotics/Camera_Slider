@@ -10,8 +10,6 @@ int buttonPin = 2;
 
 int xPosition = 0;
 int yPosition = 0;
-int velx;
-int vely;
 
 void setup()
 {
@@ -64,21 +62,4 @@ void loop()
       motor2.step(1, BACKWARD, DOUBLE);
    }
 
-   Serial.print("X: ");
-   Serial.print(xPosition);
-   Serial.print(" | Y: ");
-   Serial.println(yPosition);
-   /*Serial.println("Interleave coil steps");
-   motor1.step(2000, FORWARD, INTERLEAVE);
-   motor1.step(1000, BACKWARD, INTERLEAVE);
-   motor2.step(2000, FORWARD, INTERLEAVE);
-   motor2.step(1000, BACKWARD, INTERLEAVE);
-   delay(1000);*/
-
-   /*Serial.println("Micrsostep steps");
-   motor1.step(2000, FORWARD, MICROSTEP);
-   motor1.step(1000, BACKWARD, MICROSTEP);
-   motor2.step(2000, FORWARD, MICROSTEP);
-   motor2.step(1000, BACKWARD, MICROSTEP);
-   delay(1000);*/
 }
