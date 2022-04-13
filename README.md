@@ -3,3 +3,5 @@
 Components:
 - Arduino Nano
 - Joystick
+- 2 Stepper Motors
+- L293D Motor Shield
