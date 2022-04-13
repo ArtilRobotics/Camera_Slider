@@ -14,5 +14,7 @@ Depending on the motor, the number of steps per revolution must be set. For this
 ```
 AF_Stepper motor1(200, 1);
 ```
+To define the operating zone of the joystick, the zero point and a range of inactivity must be determined to avoid unwanted activations.
+
 ### Functioning
 ![Funcionamiento](https://github.com/ArtilRobotics/Camera_Slider/blob/main/images/Camera%20Slider.gif)
